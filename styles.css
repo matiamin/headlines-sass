@@ -1,0 +1,41 @@
+/*Box color - background color - changes for each div, so we create a variable and pass it in as a parameter. */
+/*The background color paramenter, and we're passing in the $defaultColor, which is white, as an argument. */
+.alert {
+  /*Font color changes based on the background color, so we don't need   to pass it as a parameter to the mixin. */
+  color: black;
+  /*Border color becomes a darker verison of the background color, so     we don't need to pass it as a parameter to the mixin. */
+  border: 2px solid #cccccc;
+  background: white;
+  padding: 15px;
+  margin: 18px auto;
+  max-width: 440px;
+  position: relative;
+  font-weight: bold; }
+
+/*The background color paramenter, and we're passing in the $successColor, which is #7EF07A, as an argument. */
+.success {
+  /*Font color changes based on the background color, so we don't need   to pass it as a parameter to the mixin. */
+  color: black;
+  /*Border color becomes a darker verison of the background color, so     we don't need to pass it as a parameter to the mixin. */
+  border: 2px solid #25e61e;
+  background: #7EF07A;
+  padding: 15px;
+  margin: 18px auto;
+  max-width: 440px;
+  position: relative;
+  font-weight: bold; }
+
+.error {
+  /*The background color paramenter, and we're passing in the $errorColor, which is #E62F2A, as an argument.*/
+  /*Font color changes based on the background color, so we don't need   to pass it as a parameter to the mixin. */
+  color: white;
+  /*Border color becomes a darker verison of the background color, so     we don't need to pass it as a parameter to the mixin. */
+  border: 2px solid #981512;
+  background: #E62F2A;
+  padding: 15px;
+  margin: 18px auto;
+  max-width: 440px;
+  position: relative;
+  font-weight: bold; }
+
+/*# sourceMappingURL=styles.css.map */

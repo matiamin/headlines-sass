@@ -1,0 +1,33 @@
+$successFlashColor: #7EF07A;
+$errorFlashColor: #E62F2A;
+$defaultColor: white;
+
+/*Box color - background color - changes for each div, so we create a variable and pass it in as a parameter. */
+
+@mixin flash($box-color){
+  /*Font color changes based on the background color, so we don't need   to pass it as a parameter to the mixin. */
+  color: if($box-color == $errorFlashColor, white, black);
+  /*Border color becomes a darker verison of the background color, so     we don't need to pass it as a parameter to the mixin. */
+  border: 2px solid darken($box-color, 20%);
+  background: $box-color;
+  padding: 15px;
+  margin: 18px auto;
+  max-width: 440px;
+  position: relative;
+  font-weight: bold;
+}
+
+/*The background color paramenter, and we're passing in the $defaultColor, which is white, as an argument. */
+.alert {
+  @include flash($defaultColor);
+}
+
+/*The background color paramenter, and we're passing in the $successColor, which is #7EF07A, as an argument. */
+.success {
+  @include flash($successFlashColor);
+}
+
+.error {
+  /*The background color paramenter, and we're passing in the $errorColor, which is #E62F2A, as an argument.*/
+  @include flash($errorFlashColor);
+}
